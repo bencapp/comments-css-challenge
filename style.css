@@ -30,14 +30,35 @@ body {
   background-color: var(--white);
   margin: 20px 0px;
   border-radius: 10px;
+  display: grid;
+  grid: 2fr 3fr / 1fr 4fr 1fr;
+  grid-template-areas:
+    "votes user reply"
+    "votes post post";
+  padding: 25px;
+}
+
+.vote-counter-container {
+  grid-area: votes;
+}
+
+.user-info-container {
+  grid-area: user;
+}
+.profile-img {
+  width: 40px;
+}
+
+.reply-btn {
+  grid-area: reply;
+}
+
+.post-text {
+  grid-area: post;
 }
 
 #add-comment-container {
   background-color: var(--white);
-}
-
-.profile-img {
-  width: 40px;
 }
 
 .attribution {
