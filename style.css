@@ -32,9 +32,9 @@ body {
   margin: 20px 0px;
   border-radius: 10px;
   display: grid;
-  grid: 2fr 3fr / 60px 4fr 1fr;
+  grid: 40px 1fr / 60px 4fr 1fr;
   grid-template-areas:
-    "votes user reply"
+    "votes user user"
     "votes post post";
   padding: 25px;
 }
@@ -67,18 +67,46 @@ body {
 
 .user-info-container {
   grid-area: user;
+  display: flex;
+  align-items: center;
 }
+
 .profile-img {
-  width: 40px;
+  width: 35px;
+  height: 35px;
+}
+
+.username {
+  padding-left: 15px;
+  font-weight: 500;
+}
+
+.time-posted {
+  padding-left: 15px;
+  color: var(--grayish-blue);
+}
+
+.reply-container {
+  /* places reply button at the end of the row */
+  margin-left: auto;
 }
 
 .reply-btn {
-  grid-area: reply;
   color: var(--moderate-blue);
+  font-size: medium;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+}
+
+.reply-svg {
+  /* margin-top: 15px; */
 }
 
 .post-text {
   grid-area: post;
+  color: var(--grayish-blue);
+  margin-bottom: 0px;
 }
 
 #add-comment-container {
